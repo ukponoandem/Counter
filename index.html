@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Counter app</title>
+    <style>
+ #main{
+    display: flex;
+    padding: 5%;
+   display: grid;
+    grid-template-columns: 50px 50px 50px;
+    
+  
+ }
+ .btn1{
+    display: grid;
+    grid-template-rows: 30px;
+    margin-left: 5px;
+    margin-top: 30px;
+    padding-right: 40px;
+    
+    
+ }
+ .btn2{
+    padding: 20px;
+    margin-right: 8px;
+    min-width: 50px;
+    text-align: center;
+    
+
+    
+ }
+
+ .btn3{
+    display: grid;
+    grid-template-rows: 30px;
+    margin-top: 30px;
+    padding-left: 50px;
+ }
+ .btn4{
+    margin-left: 50px;
+    padding: 10px;
+ }
+ 
+    </style>
+</head>
+
+<body>
+
+ <h1>COUNTER APP</h1> 
+<p>WELCOME...</p>
+ <div id="main">
+  <div class="btn1"><button onclick="add()" style="background-color: green; border-radius: 10px;">+</button></div>
+ <div class="btn2"><p id="result" style="background-color: coral; border: 2px solid; border-radius: 10px;">0</p></div>
+ <div class="btn3"><button onclick="substract()"style="background-color: green; border-radius: 10px; ">-</button></div>
+ <div class="btn4"><button onclick="Reset()"style="background-color: green; border-radius: 10px;">Reset</button></div>
+ </div>
+ <script>
+    let count =0
+    function add(){
+        count++
+        document.getElementById("result").innerHTML=count
+    }
+    function substract(){
+ count--
+ document.getElementById("result").innerHTML=count
+    }
+
+    function Reset(){
+        count=0
+        document.getElementById("result").innerHTML=count
+    }
+ </script>
+</body>
+</html>
